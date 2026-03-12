@@ -59,7 +59,7 @@ function enqueue_assets(): void
 
     // Enqueue styles
     wp_enqueue_style('keach-main-styles', get_stylesheet_uri(), [], VERSION);
-    wp_enqueue_style('keach-adobe-fonts', 'https://use.typekit.net/iss5iqo.css', [], null);
+    wp_enqueue_style('keach-adobe-fonts', 'https://use.typekit.net/quc7wdh.css', [], null);
 
     // Enqueue scripts
     wp_enqueue_script('gsap-core', 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js', [], null, true);

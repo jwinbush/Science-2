@@ -31,7 +31,7 @@
 :root {
   --lightgray: #e0e0e0;
   --gray: #a7a7a7;
-  --bg: #ffffff;
+  --white: #ffffff;
   --blue: #56ace1;
   --blue-hover: color-mix(in srgb, #56ace1 80%, transparent);
   --navy: #2e4159;
@@ -42,18 +42,19 @@
 
   --shadow: 0 0 10px var(--shadow-color);
   --shadow-hover: 0 0 10px var(--shadow-color-hover);
-  --shadow-alt: 0 5px 10px var(--shadow-color); /* 5px is the vertical offset */
+  --shadow-alt: 0 5px 10px var(--shadow-color);
+  /* 5px is the vertical offset */
 
   --gutter: 2rem;
 
   --max-w-max: 115.2rem;
-  --max-w-content: 80rem;
+  --max-w-content: 86rem;
   --max-w-text: 50rem;
 
   --border-radius: 2rem;
 
-  --ff-heading: "goldenbook", sans-serif;
-  --ff-body: "montserrat", sans-serif;
+  --ff-heading: "proxima-nova", sans-serif;
+  --ff-body: "proxima-nova", sans-serif;
 
   --fs-xs: clamp(0.55rem, 0.2vw + 0.5rem, 0.8rem);
   --fs-sm: clamp(0.7rem, 0.25vw + 0.6rem, 0.9rem);
@@ -239,14 +240,15 @@ hr {
   height: 1px;
   width: 100%;
   border: none;
-  background-color: currentColor; /* matches text color */
+  background-color: currentColor;
+  /* matches text color */
   margin-block: 1.5rem;
 }
 
 .btn,
 .button {
   text-transform: uppercase;
-  color: var(--bg);
+  color: var(--white);
   padding: 0.5rem 1.25rem;
   font-weight: 500;
   background-color: var(--black);
@@ -260,6 +262,7 @@ hr {
 }
 
 @media (max-width: 768px) {
+
   .btn,
   .button {
     font-size: var(--fs-md);
@@ -345,7 +348,7 @@ hr {
 
 /* Scrolled */
 .site-header-wrapper.scrolled {
-  background: var(--bg);
+  background: var(--white);
   /* box-shadow: var(--shadow); */
   border-bottom: 0.5px solid var(--lightgray);
 }
@@ -359,7 +362,7 @@ hr {
 }
 
 .site-header-wrapper.scrolled #primary-menu li:last-child a {
-  color: var(--bg);
+  color: var(--white);
 }
 
 /* Responsive */
@@ -416,7 +419,7 @@ hr {
   padding: 1rem 2rem;
   display: inline-block;
   text-decoration: none;
-  color: var(--bg);
+  color: var(--white);
   font-weight: 600;
   transition: 0.3s;
   text-transform: uppercase;
@@ -435,7 +438,7 @@ hr {
   background: var(--blue);
   margin-inline-start: 1rem;
   padding: 0.5rem 1rem;
-  color: var(--bg);
+  color: var(--white);
 }
 
 #primary-menu li:last-child a:hover {
@@ -474,17 +477,18 @@ hr {
   visibility: hidden;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
-  background-color: var(--bg);
+  background-color: var(--white);
   box-shadow: var(--shadow);
 }
 
 
 /* Reveal submenu on hover */
-.menu-item-has-children:hover > ul {
+.menu-item-has-children:hover>ul {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  max-height: 500px; /* submenu height */
+  max-height: 500px;
+  /* submenu height */
 }
 
 /* Submenu Items */
@@ -521,7 +525,7 @@ hr {
   }
 
   .hamburger-wrapper {
-    display: block;
+    display: block !important;
   }
 
   .menu-chevron {
@@ -566,7 +570,7 @@ hr {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--bg);
+    background-color: var(--white);
     border-radius: 2px;
     transform: translateY(-50%);
     transition: all 0.3s ease;
@@ -578,7 +582,7 @@ hr {
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: var(--bg);
+      background-color: var(--white);
       border-radius: 2px;
       transition: all 0.3s ease;
     }
@@ -626,7 +630,7 @@ hr {
   left: 0;
   width: 100vw;
   height: 100dvh;
-  background-color: var(--bg);
+  background-color: var(--white);
   z-index: 1001;
   transform: translateY(-100%);
   transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.3s ease;
@@ -657,7 +661,8 @@ hr {
 /* Acts as a spacer to space out drawer evenly*/
 .drawer-wrapper::before {
   content: "";
-  flex: 0; /* acts like a flexible spacer */
+  flex: 0;
+  /* acts like a flexible spacer */
 }
 
 .drawer #site-navigation {
@@ -701,7 +706,7 @@ hr {
 }
 
 .drawer #primary-menu li:last-child a {
-  color: var(--bg);
+  color: var(--white);
 }
 
 .drawer-credits {
@@ -772,7 +777,7 @@ hr {
 /***************************/
 .hero {
   position: relative;
-  /* aspect-ratio: 2/1; */
+  aspect-ratio: 7 / 3;
   width: 100%;
 }
 
@@ -787,12 +792,12 @@ hr {
 
   z-index: 1;
 }
+
 .hero-wrapper {
   height: 100%;
   margin-inline: auto;
   max-width: var(--max-w-content);
-  padding-block: 10rem 6rem;
-  padding-inline: 2rem;
+  padding: 2rem;
 }
 
 .hero-video {
@@ -807,7 +812,7 @@ hr {
 .hero-video video {
   width: 100%;
   height: 100%;
- }
+}
 
 .hero-content {
   position: relative;
@@ -819,18 +824,20 @@ hr {
   z-index: 3;
   max-width: var(--max-w-content);
   animation: fadeUp 1s ease-out forwards;
-}
-
-.hero-content h1 {
-  max-width: 20ch;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: -1px;
   color: var(--white);
 }
 
+.hero-content h1 {
+  max-width: 14ch;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: var(--white);
+  margin-bottom: 0 !important;
+}
+
 .hero-content p {
-  max-width: 45ch;
+  width: 50ch;
   color: var(--white);
   font-weight: 300;
 }
@@ -843,7 +850,7 @@ hr {
 
   .hero-content {
     max-width: 54ch;
-padding: 0;
+    padding: 0;
   }
 }
 
@@ -881,6 +888,7 @@ padding: 0;
     font-size: 5rem;
   }
 }
+
 /****************************/
 /* 7. ** Team **  */
 /***************************/
@@ -894,17 +902,6 @@ padding: 0;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-}
-
-.team::before {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  max-height: 36rem;
-  height: 100%;
-  content: "";
-  z-index: 0;
-  background: var(--lightgray);
 }
 
 .team-title {
@@ -938,15 +935,15 @@ padding: 0;
 }
 
 .learn-more p {
-  color: var(--bg);
+  color: var(--white);
   font-weight: 600;
 }
 
 .learn-more a {
-  color: var(--bg);
+  color: var(--white);
   font-weight: 400;
   text-transform: uppercase;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--white);
 }
 
 .card img {
@@ -972,23 +969,13 @@ padding: 0;
   color: var(--gray);
 }
 
-@media (max-width: 1024px) {
-  .team::before {
-    max-height: 29rem;
-  }
-}
+@media (max-width: 1024px) {}
 
 @media (max-width: 768px) {
   .team-wrapper {
     grid-template-columns: 1fr;
     row-gap: 0rem;
     text-align: center;
-  }
-
-  .team::before {
-    aspect-ratio: 5 / 12.35;
-    max-height: 25rem;
-    height: auto;
   }
 
   .team-cards {
@@ -1010,6 +997,7 @@ padding: 0;
     max-height: none;
     height: auto;
   }
+
   .team-cards {
     grid-template-columns: 1fr;
     column-gap: 0;
@@ -1023,7 +1011,7 @@ padding: 0;
   }
 
   /* padding inline for first 2 cards */
-  .card:nth-of-type(-n + 2) > * {
+  .card:nth-of-type(-n + 2)>* {
     padding-inline: var(--gutter);
   }
 
@@ -1061,14 +1049,14 @@ padding: 0;
 /***************************/
 
 .about {
-  background-color: var(--bg);
+  background-color: var(--white);
 }
 
 .about-wrapper {
   position: relative;
-  background-color: var(--bg);
+  background-color: var(--white);
   margin-inline: auto;
-   animation: fadeUp 0.8s ease-out forwards; 
+  animation: fadeUp 0.8s ease-out forwards;
 }
 
 .about-title,
@@ -1127,7 +1115,7 @@ padding: 0;
 
 .contact-wrapper {
   position: relative;
-  background-color: var(--bg);
+  background-color: var(--white);
   /*   max-width: var(--max-w-max); */
   margin-inline: auto;
 }
@@ -1240,11 +1228,12 @@ h2.contact-title span {
 /***************************/
 .carousel {
   position: relative;
-  background-color: var(--bg);
+  background-color: var(--white);
   padding: 6rem 0 2rem 0;
   /* max-width: var(--max-w-max); */
   margin-inline: auto;
 }
+
 .splide__slide {
   cursor: pointer;
 }
@@ -1276,11 +1265,12 @@ h2.contact-title span {
 
 .slide__content::before {
   content: "";
-  flex: 0; /* acts like a flexible spacer */
+  flex: 0;
+  /* acts like a flexible spacer */
 }
 
 .slide__content p {
-  color: var(--bg);
+  color: var(--white);
   font-weight: 600;
   font-size: var(--fs-base);
   letter-spacing: 1px;
@@ -1293,7 +1283,7 @@ h2.contact-title span {
   margin: 0 auto;
   text-transform: uppercase;
   font-weight: 300;
-  color: var(--bg);
+  color: var(--white);
   letter-spacing: 1px;
   font-size: var(--fs-sm);
   border-bottom: 2px solid white;
@@ -1312,11 +1302,10 @@ h2.contact-title span {
   opacity: 1 !important;
 }
 
-.splide__arrow:hover {
-}
+.splide__arrow:hover {}
 
 .splide__arrow svg {
-  fill: var(--bg) !important;
+  fill: var(--white) !important;
   height: 2.2em !important;
   width: 2.2em !important;
 }
@@ -1375,7 +1364,7 @@ h2.contact-title span {
 
   .slide__content a {
     text-transform: uppercase;
-    color: var(--bg);
+    color: var(--white);
     padding: 0.5rem 1.25rem;
     font-weight: 500;
     background-color: var(--black);
@@ -1430,7 +1419,7 @@ h2.contact-title span {
 }
 
 #back-to-top svg {
-  color: var(--bg);
+  color: var(--white);
   transform: rotate(180deg);
 }
 
@@ -1473,11 +1462,11 @@ h2.contact-title span {
 .footer-credits p {
   margin-bottom: 0;
   font-size: var(--fs-xs);
-  color: var(--bg);
+  color: var(--white);
 }
 
 .footer-socials svg {
-  color: var(--bg);
+  color: var(--white);
   transition: 0.25s ease-in-out;
   cursor: pointer;
 }
@@ -1516,7 +1505,8 @@ h2.contact-title span {
 /* Grey background at the top of inside pages */
 .grey-background {
   overflow: hidden;
-  position: relative; /* ensure ::before is positioned correctly */
+  position: relative;
+  /* ensure ::before is positioned correctly */
 }
 
 .grey-background::before {
@@ -1548,7 +1538,7 @@ h2.contact-title span {
 
 /* Scrolled */
 .page .site-header-wrapper.scrolled {
-  background: var(--bg);
+  background: var(--white);
   /* box-shadow: var(--shadow); */
   border-bottom: 0.5px solid var(--lightgray);
 }
@@ -1614,7 +1604,7 @@ h2.contact-title span {
 
 /* Edit Button */
 .post-edit-link {
-  color: var(--bg) !important;
+  color: var(--white) !important;
   position: fixed;
   left: 1rem;
   bottom: 1rem;
@@ -1632,7 +1622,7 @@ h2.contact-title span {
 /* === 404 Error Page === */
 .upcoming-events-wrapper {
   position: relative;
-  background-color: var(--bg);
+  background-color: var(--white);
 }
 
 .error-page {
@@ -1646,6 +1636,7 @@ h2.contact-title span {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -1659,7 +1650,7 @@ h2.contact-title span {
 /* === Gravity Forms === */
 .gform_title {
   font-size: var(--fs-base);
-  color: var(--bg);
+  color: var(--white);
   padding: 0.75rem;
   background: var(--gray);
   width: fit-content;
@@ -1689,7 +1680,7 @@ select#input_3_5_6 {
 
 .gform_button {
   text-transform: uppercase !important;
-  color: var(--bg) !important;
+  color: var(--white) !important;
   padding: 0.5rem 2rem !important;
   border-radius: 50px !important;
   background-color: var(--burgundy) !important;

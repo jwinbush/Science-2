@@ -6,24 +6,26 @@ get_header();
   <!-- ===================================== -->
   <!--             HERO SECTION             -->
   <!-- ===================================== -->
-    
-<section class="hero" role="banner" aria-labelledby="hero-heading">
+
+  <section class="hero" role="banner" aria-labelledby="hero-heading">
     <div class="hero-wrapper">
       <video class="hero-video" autoplay="" muted="" loop="" playsinline="" preload="auto">
-        <source src="<?php echo esc_url(get_template_directory_uri() . '/assets/videos/science.mp4'); ?>" type="video/mp4">
+        <source src="<?php echo esc_url(get_template_directory_uri() . '/assets/videos/science.mp4'); ?>"
+          type="video/mp4">
       </video>
       <div class="hero-content">
-                  <h1 class="hero-title">
-                          Ready To Serve
-                Your        
-                Legacy      
-                      </h1>
-                          <div class="hero-text">
-            <p>At Sun Ag, we bring generations of farming experience and local expertise to help your operation thrive today and for years to come.</p>
-          </div>
-                          <a class="btn btn-red" href="https://sunag.csmdemo.com/about-us/">
-            Discover More          </a>
-              </div>
+        <h1 class="hero-title">
+          Ready To Serve
+          Your
+          Legacy
+        </h1>
+        <div class="hero-text">
+          <p>At Sun Ag, we bring generations of farming experience and local expertise to help your operation thrive
+            today and for years to come.</p>
+        </div>
+        <a class="btn btn-red" href="https://sunag.csmdemo.com/about-us/">
+          Discover More </a>
+      </div>
     </div>
   </section>
 
