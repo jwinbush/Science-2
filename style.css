@@ -44,7 +44,6 @@
   --shadow: 0 0 10px var(--shadow-color);
   --shadow-hover: 0 0 10px var(--shadow-color-hover);
   --shadow-alt: 0 5px 10px var(--shadow-color);
-  /* 5px is the vertical offset */
 
   --gutter: 2rem;
 
@@ -326,7 +325,8 @@ hr {
 }
 
 .site-header {
-  padding: var(--gutter);
+  padding-inline: var(--gutter);
+  padding-block: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -846,7 +846,7 @@ hr {
 
 @media (max-width: 1024px) {
 
-   .hero {
+  .hero {
     aspect-ratio: 2/1;
   }
 
