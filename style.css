@@ -29,13 +29,14 @@
 /* 1. Global Settings */
 /* ======================== */
 :root {
-  --lightgray: #e0e0e0;
+  --lightgray: #e9e9e9;
   --gray: #a7a7a7;
   --white: #ffffff;
-  --blue: #56ace1;
-  --blue-hover: color-mix(in srgb, #56ace1 80%, transparent);
+  --red: rgb(199, 0, 0);
+  --red-hover: color-mix(in srgb, red 80%, transparent);
   --navy: #2e4159;
   --black: #000000;
+  --charcoal: #181818;
 
   --shadow-color: rgba(0, 0, 0, 0.1);
   --shadow-color-hover: rgba(0, 0, 0, 0.4);
@@ -269,9 +270,9 @@ hr {
   }
 }
 
-.btn-burgundy,
+.btn-red,
 .button {
-  background-color: var(--burgundy);
+  background-color: var(--red);
 }
 
 .btn-gray {
@@ -283,8 +284,8 @@ hr {
 }
 
 /* Button Hover */
-.btn-burgundy:hover {
-  background-color: var(--light-burgundy);
+.btn-red:hover {
+  background-color: var(--red-hover);
 }
 
 .btn-gray:hover {
@@ -426,23 +427,23 @@ hr {
 }
 
 #primary-menu li a:hover {
-  color: var(--blue);
+  color: var(--red);
 }
 
 #primary-menu li a.active {
-  color: var(--blue) !important;
+  color: var(--red) !important;
 }
 
 /* Last menu-item has a background color */
 #primary-menu li:last-child a {
-  background: var(--blue);
+  background: var(--red);
   margin-inline-start: 1rem;
   padding: 0.5rem 1rem;
   color: var(--white);
 }
 
 #primary-menu li:last-child a:hover {
-  background-color: color-mix(in srgb, var(--blue) 80%, transparent);
+  background-color: color-mix(in srgb, var(--red) 80%, transparent);
 }
 
 /* Sub-menu */
@@ -507,7 +508,7 @@ hr {
 
 /* Hover effect for submenu links */
 .menu-item-has-children ul li a:hover {
-  color: var(--blue);
+  color: var(--red);
 }
 
 .main-navigation .menu-item:has(.sub-menu):hover .sub-menu {
@@ -545,7 +546,7 @@ hr {
   display: none;
   position: relative;
   z-index: 11000;
-  background-color: var(--blue);
+  background-color: var(--red);
   padding: 1rem;
   transition: background-color 0.3s ease;
 }
@@ -654,7 +655,7 @@ hr {
   justify-content: space-between;
   width: 100%;
   padding: 2rem 3rem;
-  color: var(--blue);
+  color: var(--red);
   height: 100dvh;
 }
 
@@ -670,7 +671,7 @@ hr {
 }
 
 .drawer #site-navigation ul li a {
-  color: var(--blue);
+  color: var(--red);
   font-family: var(--ff-body);
   font-weight: 600;
 }
@@ -697,7 +698,7 @@ hr {
 }
 
 .drawer #primary-menu li a.active {
-  color: var(--blue-hover);
+  color: var(--red-hover);
 }
 
 .drawer .sub-menu .menu-item a {
@@ -739,7 +740,7 @@ hr {
 }
 
 .drawer-socials svg:hover {
-  color: var(--blue-hover);
+  color: var(--red-hover);
 }
 
 @media (max-width: 1024px) {
@@ -789,7 +790,6 @@ hr {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.60);
-
   z-index: 1;
 }
 
@@ -797,7 +797,8 @@ hr {
   height: 100%;
   margin-inline: auto;
   max-width: var(--max-w-content);
-  padding: 2rem;
+  padding-inline: 2rem;
+  padding-block: 6rem 2rem;
 }
 
 .hero-video {
@@ -837,15 +838,20 @@ hr {
 }
 
 .hero-content p {
-  width: 50ch;
+  max-width: 50ch;
+  width: 100%;
   color: var(--white);
   font-weight: 300;
 }
 
 @media (max-width: 1024px) {
+
+   .hero {
+    aspect-ratio: 2/1;
+  }
+
   .hero-wrapper {
-    padding-block: 8rem 4rem;
-    padding-inline: 3rem;
+    padding-block: 6rem 2rem;
   }
 
   .hero-content {
@@ -855,20 +861,15 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .hero-wrapper {
-    padding-block: 8rem 3rem;
-    padding-inline: 2rem;
-    padding-inline: var(--gutter);
+  .hero {
+    aspect-ratio: 4/3;
   }
+
 }
 
 @media (max-width: 600px) {
   .hero {
-    aspect-ratio: auto;
-  }
-
-  .hero-wrapper {
-    padding-block: 10rem 4rem;
+    aspect-ratio: 3/4;
   }
 
   .hero-content {
@@ -892,6 +893,10 @@ hr {
 /****************************/
 /* 7. ** Team **  */
 /***************************/
+
+.team {
+  background-color: var(--lightgray);
+}
 
 .team-wrapper {
   position: relative;
@@ -928,7 +933,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--blue);
+  background-color: var(--red);
   width: 100%;
   aspect-ratio: 4 / 5;
   cursor: pointer;
@@ -1067,7 +1072,7 @@ hr {
 
 .small-header {
   font-weight: 600;
-  color: var(--blue);
+  color: var(--red);
   letter-spacing: 2.25px;
 }
 
@@ -1254,7 +1259,7 @@ h2.contact-title span {
 
 /* Hover state */
 .splide__slide:hover .slide__content {
-  background-color: var(--blue-hover);
+  background-color: var(--red-hover);
   filter: brightness(1.1);
   opacity: 1;
   transform: translateY(0);
@@ -1407,7 +1412,7 @@ h2.contact-title span {
 }
 
 .back-to-top-wrapper {
-  background-color: var(--blue);
+  background-color: var(--red);
   padding: 1rem;
   transition: 0.3s ease-in-out;
   cursor: pointer;
@@ -1415,7 +1420,7 @@ h2.contact-title span {
 
 .back-to-top-wrapper:hover {
   backdrop-filter: blur(6px);
-  background-color: var(--blue-hover);
+  background-color: var(--red-hover);
 }
 
 #back-to-top svg {
@@ -1427,7 +1432,7 @@ h2.contact-title span {
 /** 11. Footer  **/
 /***************************/
 .site-footer-wrapper {
-  background-color: var(--navy);
+  background-color: var(--charcoal);
   padding-block: 6rem;
   padding-inline: var(--gutter);
 }
@@ -1472,7 +1477,7 @@ h2.contact-title span {
 }
 
 .footer-socials svg:hover {
-  color: var(--blue-hover);
+  color: var(--red-hover);
 }
 
 @media (max-width: 768px) {
@@ -1582,7 +1587,7 @@ h2.contact-title span {
 }
 
 .breadcrumb a:hover {
-  color: var(--blue);
+  color: var(--red);
 }
 
 /* Kadence */

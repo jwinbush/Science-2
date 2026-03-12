@@ -23,7 +23,7 @@ get_header();
           <p>At Sun Ag, we bring generations of farming experience and local expertise to help your operation thrive
             today and for years to come.</p>
         </div>
-        <a class="btn btn-red" href="https://sunag.csmdemo.com/about-us/">
+        <a class="btn btn-black" href="https://sunag.csmdemo.com/about-us/">
           Discover More </a>
       </div>
     </div>
