@@ -1,0 +1,53 @@
+/* #region === Search === */
+.search {
+	display: none;
+}
+
+.search.is-open {
+	display: flex;
+}
+
+.search form {
+	display: flex;
+	gap: 1em;
+	width: 100%;
+	align-items: center;
+	padding-block-end: 0.2em;
+	padding-inline: 0.5em;
+	color: var(--primary);
+	border-bottom: 2px solid var(--primary);
+}
+
+.search:has(:focus-visible) form {
+	outline: 2px dashed var(--primary);
+	outline-offset: 3px;
+}
+
+.search :where(input) {
+	background-color: unset;
+	border: unset;
+}
+
+.search :where(input):focus-visible {
+	outline: none;
+}
+
+.search__input {
+	width: 100%;
+	color: var(--primary);
+	outline: 0;
+}
+
+.search__btn-submit {
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.search__btn-submit:hover {
+	background-color: var(--secondary);
+}
+
+::placeholder {
+	color: var(--primary);
+}
+/* #endregion */
