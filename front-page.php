@@ -21,12 +21,16 @@ get_header();
           <p>At Sun Ag, we bring generations of farming experience and local expertise to help your operation thrive
             today and for years to come.</p>
         </div>
-        <a class="btn btn-black" href="https://sunag.csmdemo.com/about-us/">
+        <a class="btn btn-white" href="https://sunag.csmdemo.com/about-us/">
           Discover More </a>
       </div>
     </div>
   </section>
 
+  <!-- ===================================== -->
+  <!--             NEWS SECTION            -->
+  <!-- ===================================== -->
+  <?php get_template_part('template-parts/latest-news'); ?>
 
   <!-- ===================================== -->
   <!--             ABOUT SECTION            -->
@@ -76,49 +80,6 @@ get_header();
             <a href="#">Learn More</a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================== -->
-  <!--            NEWS SECTION                -->
-  <!-- ====================================== -->
-  <section class="news">
-    <div class="news-wrapper container">
-      <h2 class="title">Latest News</h2>
-      <div class="news-cards">
-        <a href="#" class="card-link">
-          <div class="card"
-            style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/astronaut.jpg'); background-size: cover; background-position: center;">
-            <div class="news-content">
-              <div class="news-category">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/newspaper.svg');"
-                  alt="Portrait of Wesley Stutter.">
-                <p>Article</p>
-              </div>
-              <div class="news-info">
-                <p class="read-time">2 Min Read</p>
-                <p class="post-title">WESLEY STUTTER</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="card"
-            style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/microscope.jpg'); background-size: cover; background-position: center;">
-            <div class="news-content">
-              <div class="news-category">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/newspaper.svg');"
-                  alt="Portrait of Wesley Stutter.">
-                <p>Article</p>
-              </div>
-              <div class="news-info">
-                <p class="read-time">2 Min Read</p>
-                <p class="post-title">WESLEY STUTTER</p>
-              </div>
-            </div>
-          </div>
-        </a>
       </div>
     </div>
   </section>
